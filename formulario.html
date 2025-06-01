@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Contacto</title>
+</head>
+<body>
+  <h1>Enviar mensaje</h1>
+  <form action="guardar.php" method="POST">
+    <label>Nombre:</label><br>
+    <input type="text" name="nombre" required><br><br>
+
+    <label>Correo:</label><br>
+    <input type="email" name="correo" required><br><br>
+
+    <label>Mensaje:</label><br>
+    <textarea name="mensaje" rows="5" required></textarea><br><br>
+
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>

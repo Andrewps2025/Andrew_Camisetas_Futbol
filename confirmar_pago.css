@@ -1,0 +1,231 @@
+/* ---------- Estilos Generales ---------- */
+/* Resetea márgenes y padding de todos los elementos, y usa box-sizing para mejor control de tamaños */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo base para el cuerpo de la página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+}
+
+/* ---------- Encabezado y Pie de Página ---------- */
+/* Estilo común para header y footer con fondo azul y texto blanco centrado */
+header, footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Header fijo en la parte superior */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* Espacio superior extra para el footer */
+footer {
+    margin-top: 30px;
+}
+
+/* ---------- Contenedor Principal ---------- */
+/* Contenedor central para el contenido, ancho máximo y margen auto para centrar */
+.container {
+    max-width: 1250px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* ---------- Título Principal ---------- */
+/* Título grande centrado con color azul oscuro */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #003366;
+}
+
+/* ---------- Distribución Columnas Checkout ---------- */
+/* Contenedor de las columnas izquierda y derecha, con espacio entre ellas y envoltura para móviles */
+.checkout-wrapper {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Columna izquierda: ocupa 55% del espacio */
+.left-column {
+    flex: 1 1 55%;
+}
+
+/* Columna derecha: ocupa 40% del espacio */
+.right-column {
+    flex: 1 1 40%;
+}
+
+/* ---------- Secciones Internas ---------- */
+/* Estilo base para cada sección: fondo blanco, borde, padding, sombra y borde redondeado */
+.section {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+/* Estilo para los títulos dentro de las secciones */
+.section h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #1656a3;
+    margin-bottom: 18px;
+}
+
+/* ---------- Opciones de Entrega ---------- */
+/* Contenedor para cada opción de entrega, alineados horizontalmente y con espacio entre elementos */
+.delivery-choice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+/* Estilo para las etiquetas (textos) de las opciones */
+.delivery-choice label {
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Pequeño margen derecho para los inputs tipo radio */
+.delivery-choice input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Estilo para precios */
+.price {
+    font-weight: bold;
+}
+
+/* Precio gratis con color verde */
+.price.free {
+    color: #22a522;
+}
+
+/* Enlaces para más puntos de entrega */
+.more-points {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* ---------- Método de Pago ---------- */
+/* Estilo base para contenedor del método de pago */
+.payment-info {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Contenedor para múltiples métodos de pago con flexbox */
+/* Ajustado para que los QR de Yape y Plin estén uno al lado del otro */
+.payment-info.multiple-payments {
+    display: flex;
+    gap: 40px; /* espacio entre bloques */
+    justify-content: center;
+    flex-wrap: nowrap; /* NO permite que baje ninguno */
+    margin-top: 10px;
+    max-width: 600px; /* máximo ancho para que no ocupe toda la pantalla */
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto; /* si no caben, aparece scroll horizontal */
+    padding-bottom: 10px; /* espacio para scroll */
+}
+
+/* Cada bloque individual de método de pago */
+.payment-block {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px 20px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    width: 280px; /* ancho fijo para que queden iguales */
+    text-align: center;
+    flex-shrink: 0; /* evitar que se reduzca al mínimo */
+}
+
+/* Texto bajo cada QR */
+.payment-block p {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Imagen QR ajustada al contenedor */
+.payment-block img.qr-code {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+/* Estilos para las etiquetas de pago */
+.payment-icon {
+    display: inline-block;
+    padding: 8px 20px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    min-width: 120px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* Colores específicos por método */
+.payment-icon.yape {
+    background-color: #6f0f82;
+}
+
+.payment-icon.plin {
+    background-color: #3db500;
+}
+
+/* Responsive para pantallas pequeñas */
+/* Aquí no cambia la dirección, sólo mantiene scroll y ancho fijo */
+@media (max-width: 600px) {
+    .payment-info.multiple-payments {
+        max-width: 100%;
+        padding-bottom: 10px;
+    }
+    .payment-block {
+        width: 280px; /* mantiene ancho fijo para scroll */
+    }
+}
+
+/* ---------- Responsive ---------- */
+/* Para que el layout principal se adapte en pantallas pequeñas */
+@media (max-width: 900px) {
+    .checkout-wrapper {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        flex: 1 1 100%;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}

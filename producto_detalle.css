@@ -1,0 +1,247 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #003366;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #003366;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.logo-img {
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    color: #f0a500;
+}
+
+/* Contenedor principal de detalle */
+.producto-detalle {
+    margin-top: 90px; /* Para dejar espacio al navbar fijo */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+    background: white;
+    border-radius: 10px;
+}
+
+/* Imagen principal */
+.producto-imagen {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.producto-imagen img#imagenPrincipal {
+    max-width: 100%;
+    max-height: 600px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    cursor: zoom-in;
+}
+
+/* Flechas para cambiar imagen */
+.flechas {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    font-size: 25px;
+    cursor: pointer;
+    color: #003366;
+    user-select: none;
+}
+
+/* Galería de miniaturas */
+.producto-galeria {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.producto-galeria img.miniatura {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.producto-galeria img.miniatura.selected {
+    border-color: #003366;
+}
+
+/* Información producto */
+.producto-info {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.producto-info h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.producto-info .temporada {
+    font-size: 18px;
+    color: #555;
+}
+
+.valoraciones {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.precio {
+    font-size: 28px;
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.detalles p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #003366;
+}
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+select:focus, input[type="text"]:focus {
+    border-color: #003366;
+}
+
+.social-icons {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.social-icons button.btn-favorito {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.social-icons button.btn-favorito i.fa-heart {
+    font-size: 30px;
+    color: #ccc;
+}
+
+.social-icons button.btn-favorito:hover i.fa-heart {
+    color: #f00;
+}
+
+#addCart {
+    width: 100%;
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+#addCart:hover {
+    background-color: #00509e;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .producto-detalle {
+        flex-direction: column;
+    }
+    .producto-imagen, .producto-info {
+        padding: 0;
+    }
+    .producto-imagen img#imagenPrincipal {
+        max-height: 400px;
+    }
+    .producto-galeria img.miniatura {
+        width: 60px;
+        height: 60px;
+    }
+}

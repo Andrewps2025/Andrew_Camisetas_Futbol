@@ -1,0 +1,70 @@
+/* ================================ */
+/* MENSAJE DE CONFIRMACIÓN BONITO  */
+/* ================================ */
+.mensaje-confirmacion {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    animation: aparecerDesdeAbajo 0.7s ease-out;
+    margin-top: 60px;
+}
+
+/* ANIMACIÓN */
+@keyframes aparecerDesdeAbajo {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.mensaje-icono {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.mensaje-confirmacion h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.mensaje-principal {
+    font-size: 17px;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.mensaje-secundario {
+    font-size: 15px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+/* Botón verde para volver */
+.btn-volver {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-volver:hover {
+    background: #218838;
+    transform: scale(1.05);
+}

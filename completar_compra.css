@@ -1,0 +1,263 @@
+/* ===== Reset básico ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Incluye padding y borde dentro del tamaño total */
+}
+
+/* ===== Estilos generales del body ===== */
+body {
+  font-family: 'Roboto', Arial, sans-serif; /* Fuente limpia y moderna */
+  background-color: #f4f4f4;                /* Fondo gris claro */
+  color: #333;                             /* Color texto principal */
+  min-height: 100vh;                      /* Altura mínima para que cubra toda la pantalla */
+  display: flex;
+  justify-content: center;                /* Centrar horizontalmente el contenido */
+  align-items: flex-start;                /* Alineación vertical arriba */
+  padding: 30px 15px;                     /* Espaciado interno para que no quede pegado */
+}
+
+/* ===== Contenedor principal ===== */
+.container {
+  max-width: 1100px;                      /* Ancho máximo para el contenido */
+  width: 100%;                           /* Ocupa todo el ancho disponible */
+  display: flex;                         /* Layout en fila para entrega y resumen */
+  gap: 30px;                            /* Separación entre columnas */
+  background: white;                    /* Fondo blanco */
+  padding: 25px 30px;                   /* Espaciado interno */
+  border-radius: 10px;                  /* Bordes redondeados */
+  box-shadow: 0 0 15px rgba(0,0,0,0.1); /* Sombra suave para profundidad */
+}
+
+/* ===== Sección entrega ===== */
+.entrega {
+  flex: 2;                             /* Ocupa más espacio que el resumen */
+}
+
+/* Dirección con ícono */
+.direccion {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.direccion i {
+  font-style: normal; /* para que el icono no tenga cursiva si es texto */
+  font-size: 20px;
+  color: #e54867;
+}
+
+/* Link cambiar dirección */
+.cambiar-direccion {
+  margin-left: auto;                 /* Empuja a la derecha */
+  font-weight: 600;
+  color: #003366;
+  text-decoration: none;
+  cursor: pointer;
+}
+.cambiar-direccion:hover {
+  text-decoration: underline;
+}
+
+/* Título venta */
+.entrega h3 {
+  font-weight: 700;
+  font-size: 18px;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+/* Opciones de entrega */
+.opcion-entrega {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Cambia fondo al pasar mouse */
+.opcion-entrega:hover {
+  background-color: #f9f9f9;
+}
+
+/* Radio button */
+.opcion-entrega input[type="radio"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Texto gratis destacado */
+.gratis {
+  color: #28a745;
+  font-weight: 700;
+  margin-left: auto; /* Separado a la derecha */
+}
+
+/* Texto pequeño para detalles */
+.opcion-entrega small {
+  color: #666;
+  font-size: 12px;
+  margin-left: 28px; /* Para dejar espacio al radio */
+}
+
+/* Costo de envío a la derecha */
+.costo-envio {
+  margin-left: auto;
+  font-weight: 700;
+  color: #333;
+}
+
+/* ===== Lista productos comprados ===== */
+.productos-comprados {
+  margin-top: 30px;
+}
+
+/* Título lista productos */
+.productos-comprados h3 {
+  font-weight: 700;
+  font-size: 18px;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+/* Cada producto en lista */
+.producto-lista-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 12px 0;
+}
+
+/* Imagen del producto */
+.producto-lista-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-right: 20px;
+}
+
+/* Información del producto */
+.producto-lista-info {
+  flex-grow: 1;
+}
+
+/* Nombre del producto */
+.producto-lista-info .nombre {
+  font-weight: 700;
+  font-size: 15px;
+  color: #003366;
+  margin-bottom: 6px;
+}
+
+/* Detalles (cantidad, precio unitario) */
+.producto-lista-info .detalle {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Precio total del producto a la derecha */
+.producto-lista-precio {
+  font-weight: 700;
+  font-size: 15px;
+  color: #000;
+  min-width: 90px;
+  text-align: right;
+}
+
+/* ===== Sección resumen ===== */
+.resumen {
+  flex: 1; /* Ocupa menos espacio */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 25px 20px;
+  font-size: 16px;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: fit-content; /* Se ajusta al contenido */
+}
+
+/* Título resumen */
+.resumen h2 {
+  font-weight: 700;
+  font-size: 22px;
+  color: #003366;
+  margin: 0;
+}
+
+/* Items del resumen */
+.resumen-item {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+/* Quitar borde al último */
+.resumen-item:last-child {
+  border-bottom: none;
+}
+
+/* Descuentos con color verde */
+.descuento {
+  color: #28a745;
+}
+
+/* Total final resaltado */
+.resumen-total {
+  font-size: 18px;
+  font-weight: 900;
+  color: #e54867;
+  border-top: 2px solid #ddd;
+  padding-top: 12px;
+}
+
+/* Botón para ir a pagar */
+.btn-pagar {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* Empuja el botón al final del contenedor */
+  display: block;
+}
+
+.btn-pagar:hover {
+  background-color: #e54867;
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Poner vertical en pantallas pequeñas */
+  }
+  .resumen {
+    margin-top: 20px;
+  }
+}

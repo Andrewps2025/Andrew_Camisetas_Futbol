@@ -1,0 +1,731 @@
+/* =================================== */
+/* REINICIO DE MÁRGENES Y PADDINGS POR DEFECTO */
+/* =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =================================== */
+/* ESTILO GENERAL PARA TODO EL BODY */
+/* =================================== */
+body {
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* =================================== */
+/* ENCABEZADO (NAVBAR) */
+/* =================================== */
+/* =================================== */
+/* HEADER / NAVBAR */
+/* =================================== */
+
+.navbar {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* Contenedor del logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.logo-img {
+    height: 60px;
+    width: auto;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.logo-text {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navegación central */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-left: 130px;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover {
+    color: #ff0000;
+}
+
+/* Caja del buscador */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 10px;
+}
+.search-bar input {
+    padding: 7px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: none;
+    min-width: 180px;
+}
+.search-bar button {
+    padding: 8px 18px;
+    background: #ff0000;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.search-bar button:hover {
+    background: #cc0000;
+}
+
+/* =================================== */
+/* CORRECCIÓN: Alinear "Hola, Freddy" y "Carrito" correctamente */
+/* =================================== */
+.user-actions {
+    display: flex;              /* Flexbox para alinear enlaces horizontalmente */
+    align-items: center;        /* Centrado vertical */
+    gap: 25px;
+    margin-left: 25px;
+}
+.user-actions a {
+    display: inline-flex;       /* Para centrar verticalmente el texto */
+    align-items: center;        /* Centrado vertical dentro del <a> */
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 0;             /* Uniforme arriba y abajo */
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+.user-actions a:hover {
+    color: #ff0000;
+}
+
+
+/* =================================== */
+/* HERO / BANNER PRINCIPAL */
+/* =================================== */
+.hero {
+    position: relative;
+    height: 500px;
+    background: url('images/hero-futbol.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-content {
+    background: rgba(0,0,0,0.6);
+    padding: 40px 50px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    max-width: 900px;
+    width: 90%;
+}
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+.btn-primary {
+    background: #ff0000;
+    padding: 15px 40px;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s ease;
+    display: inline-block;
+}
+.btn-primary:hover {
+    background: #cc0000;
+}
+
+/* =================================== */
+/* SECCIONES DE PRODUCTOS Y TARJETAS */
+/* =================================== */
+.nuevas-llegadas, .productos-destacados, .equipamiento, .blog {
+    margin-bottom: 60px;
+}
+
+h2 {
+    color: #003366;
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Contenedor flex para tarjetas */
+.nuevas-llegadas > div,
+.productos-destacados > div,
+.equipamiento > div,
+.blog > div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Tarjetas individuales */
+.nuevas-llegadas > div > div,
+.productos-destacados > div > div,
+.equipamiento > div > div,
+.blog > div > article {
+    width: 260px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Imágenes dentro de tarjetas */
+.nuevas-llegadas img,
+.productos-destacados img,
+.equipamiento img,
+.blog img {
+    width: 100%;
+    border-radius: 14px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Títulos dentro de tarjetas */
+.nuevas-llegadas h3,
+.productos-destacados h3,
+.equipamiento h3,
+.blog h3 {
+    color: #003366;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+/* Precio dentro de tarjetas */
+.nuevas-llegadas p,
+.productos-destacados p,
+.equipamiento p,
+.blog p {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+/* Botón dentro de tarjetas */
+.nuevas-llegadas a,
+.productos-destacados a,
+.equipamiento a,
+.blog a {
+    background-color: #003366;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+.nuevas-llegadas a:hover,
+.productos-destacados a:hover,
+.equipamiento a:hover,
+.blog a:hover {
+    background-color: #0055aa;
+}
+
+/* Hover efecto para tarjetas */
+.nuevas-llegadas > div > div:hover,
+.productos-destacados > div > div:hover,
+.equipamiento > div > div:hover,
+.blog > div > article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* =================================== */
+/* PROMOCIONES Y OFERTA FLASH */
+/* =================================== */
+/* =================================== */
+/* PROMOCIONES Y OFERTA FLASH */
+/* =================================== */
+
+.promociones, .oferta-flash {
+    border-radius: 12px;               /* Bordes redondeados para estilo moderno */
+    text-align: center;                /* Centra el texto horizontalmente */
+    padding: 30px 15px;                /* Espaciado interno: 30px arriba/abajo, 15px izquierda/derecha (reducido) */
+    margin-bottom: 40px;              /* Espacio inferior entre secciones reducido (antes era 60px) */
+    max-width: 800px;                 /* Limita el ancho máximo para que no ocupe todo el ancho de la pantalla */
+    margin-left: auto;               /* Centra horizontalmente (junto con margin-right) */
+    margin-right: auto;
+}
+
+.promociones {
+    background-color: #003366;        /* Fondo azul oscuro para la sección de promociones */
+    color: white;                     /* Texto en blanco para buen contraste */
+}
+
+.oferta-flash {
+    background-color: #ff0000;        /* Fondo rojo llamativo para captar atención */
+    color: white;                     /* Texto blanco para alto contraste */
+    display: flex;                    /* Usa flexbox para distribuir internamente los elementos */
+    flex-direction: column;          /* Ordena los elementos en columna */
+    align-items: center;             /* Centra horizontalmente los elementos */
+    justify-content: center;         /* Centra verticalmente los elementos */
+    gap: 15px;                        /* Espacio vertical entre los elementos (reducido de 25px) */
+    padding: 20px 15px;              /* Padding vertical reducido (antes era 40px), para menor altura */
+    border-radius: 12px;             /* Bordes redondeados para consistencia con promociones */
+    max-width: 900px;                /* Ancho máximo ligeramente mayor que promociones */
+    margin: 0 auto 40px auto;        /* Centrado horizontal y espacio inferior */
+}
+
+.oferta-flash h2 {
+    font-size: 2.6rem;               /* Tamaño grande para titular llamativo */
+    font-weight: 700;               /* Negrita para destacar */
+    color: #003366;                 /* Azul oscuro para coherencia con la marca */
+    text-align: center;             /* Centrado horizontal del texto */
+    max-width: 100%;                /* Asegura que no se desborde */
+    line-height: 1.2;               /* Espaciado entre líneas ajustado */
+}
+
+.oferta-flash p {
+    max-width: 350px;               /* Limita el ancho del párrafo para una mejor legibilidad */
+    font-size: 1.1rem;              /* Tamaño de texto legible pero no muy grande */
+    color: white;                   /* Texto blanco para contraste sobre el fondo rojo */
+    text-align: center;            /* Centra el texto dentro del contenedor */
+    margin: 0 auto;                /* Centra el bloque de texto horizontalmente */
+}
+
+.oferta-flash #countdown {
+    font-size: 3rem;                /* Tamaño grande para llamar la atención al tiempo restante */
+    font-weight: 700;              /* Negrita para destacar */
+    letter-spacing: 3px;           /* Espaciado entre caracteres para efecto visual */
+}
+
+.oferta-flash a {
+    background: white;             /* Fondo blanco para destacar el botón */
+    color: #ff0000;                /* Texto rojo para coherencia con el fondo principal */
+    padding: 15px 40px;            /* Espaciado interno amplio para un botón grande y cómodo */
+    font-weight: 700;              /* Negrita para texto del botón */
+    border-radius: 12px;           /* Bordes redondeados del botón */
+    text-decoration: none;         /* Elimina el subrayado del enlace */
+    font-size: 18px;               /* Tamaño del texto del botón */
+    transition: background 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+.oferta-flash a:hover {
+    background: #f0f0f0;           /* Cambia a gris claro al pasar el cursor para efecto hover */
+}
+
+/* =================================== */
+/* CATEGORÍAS INTERACTIVAS */
+/* =================================== */
+
+.categorias-interactivas > div {
+    display: flex;              /* Flex para alinear horizontal */
+    justify-content: center;    /* Centrar tarjetas */
+    gap: 40px;                  /* Espacio entre tarjetas */
+    flex-wrap: wrap;            /* Que bajen si no caben en línea */
+}
+
+.categoria-card {
+    width: 300px;               /* Ancho fijo */
+    height: 800x;              /* Aumenté altura de 200px a 250px para imágenes más largas */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgb(0 0 0 / 0.1);
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.categoria-card img {
+    width: 100%;
+    height: 100%;              /* Ocupa toda la altura del contenedor */
+    object-fit: cover;         /* Ajusta sin deformar */
+    transition: transform 0.3s ease;
+}
+
+.categoria-card:hover img {
+    transform: scale(1.1);
+}
+
+.categoria-card div {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.categoria-card:hover div {
+    background: rgba(0,0,0,0.8);
+}
+
+/* =================================== */
+/* GALERÍA CLIENTES */
+/* =================================== */
+
+.galeria-clientes > div {
+    display: flex;              /* Usa flexbox para colocar las imágenes en fila horizontal. */
+    justify-content: center;    /* Centra horizontalmente el grupo de imágenes dentro del contenedor. */
+    flex-wrap: wrap;            /* Permite que las imágenes bajen a la siguiente línea si no caben. */
+    gap: 15px;                  /* Espacio (en píxeles) entre cada imagen. */
+}
+
+.galeria-clientes img {
+    width: 250px;               /* Ancho fijo de las imágenes (puedes aumentarlo si quieres hacerlas más grandes, por ejemplo 180px o 200px). */
+    height: auto;               /* Mantiene la proporción original de la imagen (no se distorsiona). */
+    border-radius: 12px;        /* Aplica esquinas redondeadas de 12px para estética más suave. */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);  /* Aplica una sombra leve debajo de cada imagen para destacarla. */
+    transition: transform 0.3s ease;        /* Agrega animación suave al hacer hover. */
+    cursor: pointer;            /* Cambia el cursor a una mano al pasar el mouse, indicando que es clickeable. */
+}
+
+.galeria-clientes img:hover {
+    transform: scale(1.05);     /* Agranda ligeramente la imagen al hacer hover (efecto zoom). */
+    box-shadow: 0 6px 15px rgba(0,150,255,0.6);  /* Aplica una sombra más intensa con un tono azulado para resaltar más. */
+}
+
+/* =================================== */
+/* FAQ - PREGUNTAS FRECUENTES */
+/* =================================== */
+.faq {
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+}
+.faq details {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+.faq summary {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.faq p {
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+/* =================================== */
+/* NEWSLETTER */
+/* =================================== */
+/* Contenedor principal del newsletter */
+.newsletter {
+    background-color: #003366; /* Fondo blanco para claridad */
+    padding: 50px 20px;        /* Espaciado interno arriba/abajo y lados */
+    color: #ffffff;            /* Texto azul oscuro para buena lectura */
+    text-align: center;        /* Centrar el texto dentro del contenedor */
+    border-radius: 15px;       /* Bordes redondeados para suavizar */
+    margin-bottom: 80px;       /* Margen inferior para separar de otras secciones */
+    max-width: 900px;          /* Máximo ancho para que no sea muy ancho */
+    margin-left: auto;         /* Centrado horizontal */
+    margin-right: auto;        /* Centrado horizontal */
+    font-family: Arial, sans-serif; /* Fuente legible y profesional */
+}
+
+/* Título o encabezado del newsletter */
+.newsletter h2 {
+    font-weight: 700;          /* Texto en negrita */
+    font-size: 2.2rem;         /* Tamaño destacado */
+    margin-bottom: 20px;       /* Espacio abajo para separación */
+    color: #ffffff;            /* Asegurar color azul oscuro */
+}
+
+/* Formulario dentro del newsletter */
+.newsletter form {
+    max-width: 600px;          /* Máximo ancho para el formulario */
+    margin: auto;              /* Centrado */
+    display: flex;             /* Usamos flexbox para alinear input y botón */
+    gap: 15px;                 /* Espacio entre input y botón */
+    flex-wrap: wrap;           /* Permite que en pantallas pequeñas se adapte */
+    justify-content: center;   /* Centra los elementos horizontalmente */
+}
+
+/* Estilo del input para email */
+.newsletter input[type="email"] {
+    padding: 15px;             /* Espaciado interno cómodo */
+    border-radius: 12px;       /* Bordes redondeados */
+    border: 1px solid #ccc;    /* Borde gris claro para mejor visibilidad */
+    flex: 1 1 300px;           /* Flexible para crecer y no ser muy pequeño */
+    font-size: 18px;           /* Texto legible */
+    color: #333;               /* Color de texto oscuro para buena lectura */
+}
+
+/* Color del texto placeholder en el input */
+.newsletter input[type="email"]::placeholder {
+    color: #999;               /* Gris claro para el texto de ejemplo */
+}
+
+/* Estilo del botón "Suscribirme" */
+.newsletter button {
+    background: #ff0000;       /* Rojo intenso para llamar la atención */
+    color: white;              /* Texto blanco para contraste */
+    border: none;              /* Sin borde */
+    padding: 15px 40px;        /* Espaciado interno */
+    font-weight: 700;          /* Texto en negrita */
+    border-radius: 12px;       /* Bordes redondeados */
+    cursor: pointer;           /* Cursor tipo mano */
+    font-size: 18px;           /* Texto legible */
+    transition: background 0.3s ease; /* Transición suave al cambiar color */
+}
+
+/* Efecto hover del botón */
+.newsletter button:hover {
+    background: #cc0000;       /* Rojo más oscuro al pasar el cursor */
+}
+
+/* =================================== */
+/* PIE DE PÁGINA */
+/* =================================== */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+footer p {
+    margin: 0;
+}
+footer .social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+footer .social-icons a {
+    font-size: 22px;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+footer .social-icons a:hover {
+    color: #ff0000;
+}
+
+/* =================================== */
+/* BOTÓN FLOTANTE IR ARRIBA */
+/* =================================== */
+#btnScrollTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #ff0000;
+    color: white;
+    border: none;
+    padding: 15px 18px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+#btnScrollTop:hover {
+    background: #cc0000;
+}
+
+/* =================================== */
+/* BOTÓN FLOTANTE WHATSAPP */
+/* =================================== */
+.btn-whatsapp {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    font-size: 28px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-whatsapp:hover {
+    background-color: #1ebe57;
+}
+
+/* =================================== */
+/* MEDIA QUERIES */
+/* =================================== */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #003366;
+        position: fixed;
+        top: 60px;
+        right: 0;
+        width: 250px;
+        height: 100vh;
+        padding-top: 30px;
+        z-index: 1001;
+        transition: transform 0.3s ease;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        margin-left: 15px;
+    }
+    .nuevas-llegadas > div,
+    .productos-destacados > div,
+    .equipamiento > div,
+    .blog > div {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nuevas-llegadas > div > div,
+    .productos-destacados > div > div,
+    .equipamiento > div > div,
+    .blog > div > article {
+        width: 90%;
+        margin: 0 auto 30px auto;
+    }
+    .categorias-interactivas > div {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+/* =================================== */
+/* NOTICIAS - Mantener 3 columnas */
+/* =================================== */
+.blog > div {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: nowrap; /* evita que el tercer artículo baje */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.blog > div > article {
+    width: 320px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Responsive para noticias */
+@media screen and (max-width: 768px) {
+    .blog > div {
+        flex-wrap: wrap; /* permite que baje a 2da línea en móvil */
+        max-width: 100%;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    .blog > div > article {
+        width: 100%;
+    }
+}
+/* Contenedor principal para dropdown Mi Cuenta */
+.mi-cuenta-dropdown {
+  position: relative;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  user-select: none;
+}
+
+/* El texto y el icono de flecha */
+.mi-cuenta-dropdown .dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Menú desplegable oculto inicialmente */
+.mi-cuenta-dropdown .dropdown-menu {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: none; /* oculto inicialmente */
+  flex-direction: column;
+  min-width: 150px;
+  z-index: 10000;
+}
+
+/* Mostrar menú cuando tenga clase "open" */
+.mi-cuenta-dropdown.open .dropdown-menu {
+  display: flex;
+}
+
+/* Estilo de los enlaces del menú */
+.mi-cuenta-dropdown .dropdown-menu a {
+  padding: 10px 16px;
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.2s ease;
+}
+.mi-cuenta-dropdown .dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+/* Hover sobre opciones */
+.mi-cuenta-dropdown .dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+

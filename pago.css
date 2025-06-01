@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 550px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.titulo {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.usuario {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.metodos-pago h3,
+.resumen-compra h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #003366;
+}
+
+.tarjeta-metodo {
+    display: flex;
+    align-items: flex-start;
+    background: #f0f4f8;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.tarjeta-metodo input[type="radio"] {
+    margin-top: 15px;
+    accent-color: #003366;
+}
+
+.tarjeta-metodo label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.icono-pago {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.item-compra {
+    display: flex;
+    gap: 15px;
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.producto-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.detalle-producto {
+    flex: 1;
+}
+
+.nombre {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.resumen-total {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.envio {
+    color: green;
+    font-weight: bold;
+}
+
+.total {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.btn-whatsapp {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #25d366;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe5d;
+}
+
+.whatsapp-texto {
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.volver {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.volver a {
+    text-decoration: none;
+    color: #600080;
+}
+
+/* ✅ NUEVO: Estilos para formulario de comprobante de pago */
+.form-comprobante {
+    margin-top: 30px;
+    background-color: #eef2f7;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form-comprobante h3 {
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+.form-comprobante label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-comprobante input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.form-comprobante .btn-confirmar {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form-comprobante .btn-confirmar:hover {
+    background-color: #001f4d;
+}
